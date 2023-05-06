@@ -1,3 +1,4 @@
+
 package org.crud.app.model;
 
 import jakarta.persistence.Column;
@@ -6,31 +7,80 @@ import jakarta.persistence.Id;
 import jakarta.persistence.Table;
 
 @Entity
-@Table(name = "itemModel")
+@Table(name="PassengerDetails")
 public class ItemModel {
 	
 	@Id
-	@Column(name = "item_id")
-	private int item_id;
-	private String item_name;
-	private int quantity;
-	public int getItem_id() {
-		return item_id;
+	@Column(name="passengerid")
+	private int passengerid;
+	private String from;
+	private String to;
+	private String date;
+	private String emailid;
+	private String age;
+	private String phonenumber;
+	private int userid;
+	private String username;
+	private String password;
+	public int getPassengerid() {
+		return passengerid;
 	}
-	public void setItem_id(int item_id) {
-		this.item_id = item_id;
+	public void setPassengerid(int passengerid) {
+		this.passengerid = passengerid;
 	}
-	public String getItem_name() {
-		return item_name;
+	public String getFrom() {
+		return from;
 	}
-	public void setItem_name(String item_name) {
-		this.item_name = item_name;
+	public void setFrom(String from) {
+		this.from = from;
 	}
-	public int getQuantity() {
-		return quantity;
+	public String getTo() {
+		return to;
 	}
-	public void setQuantity(int quantity) {
-		this.quantity = quantity;
+	public void setTo(String to) {
+		this.to = to;
 	}
-
+	public String getDate() {
+		return date;
+	}
+	public void setDate(String date) {
+		this.date = date;
+	}
+	public String getEmailid() {
+		return emailid;
+	}
+	public void setEmailid(String emailid) {
+		this.emailid = emailid;
+	}
+	public String getAge() {
+		return age;
+	}
+	public void setAge(String age) {
+		this.age = age;
+	}
+	public String getPhonenumber() {
+		return phonenumber;
+	}
+	public void setPhonenumber(String phonenumber) {
+		this.phonenumber = phonenumber;
+	}
+	public int getUserid() {
+		return userid;
+	}
+	public void setUserid(int userid) {
+		this.userid = userid;
+	}
+	public String getUsername() {
+		return username;
+	}
+	public void setUsername(String username) {
+		this.username = username;
+	}
+	public String getPassword() {
+		return password;
+	}
+	public void setPassword(String password) {
+		this.password = password;
+	}
 }
+
