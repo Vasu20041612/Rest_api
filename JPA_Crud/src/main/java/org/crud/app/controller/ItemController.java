@@ -16,6 +16,7 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
+
 @RestController
 public class ItemController {
 
@@ -121,5 +122,29 @@ public class ItemController {
 
 			return "Problem occur while updating";
 
+	}
+    @PostMapping("/poststudent")
+	
+	public  ItemModel add(@RequestBody  ItemModel smodel) {
+		return i_ser.addStudent(smodel);
+	}
+	
+	@GetMapping("/getstudent")
+	
+	public List<ItemModel> get(){
+		return i_ser.getStudent();
+	}
+	
+	@PutMapping("/putstudent")
+	
+	public ItemModel put( @RequestBody  ItemModel smodel) {
+		return i_ser.putdata(smodel);
+	}
+	
+	@DeleteMapping("/deletestudent")
+	
+	public String delete( @RequestParam int studentid) {
+		 i_ser.deletedata(studentid);
+		 return studentid+" deleted";
 	}
 }
